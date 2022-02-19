@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<HTML>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>grid</title>
+      <style type="text/css" media="all">
+         body{
+            width: 100%;
+            font-size: 25px;
+            font-family: Arial;
+            align-items: center;
+            justify-content: center;
+         }
+         .container{
+            display: grid;
+            grid-template-rows: 100px 100px 200px 250px 50px;
+            grid-template-columns:repeat(5, 2fr) ;
+            grid-template-areas: 
+            'header header header nav nav'
+            'title title title title sideBar'
+            'meta conten conten conten sideBar'
+            'meta img img img sideBar'
+            'footer footer footer footer footer';
+            
+            
+         }
+         .header{
+            grid-area: header;
+            background-color: rgb(101, 67, 54);
+         }
+         .nav{
+            grid-area: nav;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(101, 67, 154);
+            
+         }
+         .postt{
+            grid-area: title;
+            background-color: rgb(101, 5, 54);
+         }
+         .side{
+            grid-area: sideBar;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+         }
+         .side #other{
+            background-color: red;
+         }
+          .side #ads{
+            background-color: yellow;
+         }
+          .side #sidebar{
+            background-color: blue;
+         }
+         .footer{
+            grid-area: footer;
+            background-color: rgb(101, 67, 0);
+         }
+         .main{
+            grid-area: img;
+            background-color: rgb(30, 90, 30);
+         }
+         .conten{
+            grid-area: conten;
+            background-color: rgb(67, 67, 54);
+         }
+         .post{
+            grid-area: meta;
+            background-color: rgb(101, 67, 88);
+         }
+         
+         
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="header">Site Title</div>
+         <div class="nav">
+            <div>Nav1</div>
+            <div>Nav2</div>
+            <div>Nav3</div>
+         </div>
+         <div class="postt">Post Title</div>
+         <div class="side">
+            <div id="sidebar">Side bar</div>
+            <div id="ads">Ads</div>
+            <div id="other">Other</dIv>
+         </div>
+         <div class="post">Post meta</div>
+         <div class="conten">Content</div>
+         <div class="main">Img</div>
+         
+         <div class="footer">Footer</div>
+         
+      </div>
+   </body>
+</HTML>
